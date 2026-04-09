@@ -53,7 +53,7 @@ Restart Claude Code.
 ## Setup
 
 ```
-/lang-coach:setup ja en
+/lang-coach:setup en ja
 ```
 
 ## Commands
