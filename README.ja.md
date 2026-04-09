@@ -50,6 +50,7 @@ Claude Code を再起動。
 | `/lang-coach:setup <native> <target>` | 言語ペアを設定し自動検知を有効化 |
 | `/lang-coach:setup autodetect on\|off` | 自動検知の切替 |
 | `/lang-coach:learn <text>` | 詳細な添削 (学習言語) または翻訳指導 (母国語) |
+| `/lang-coach:learn last` | 直近の自動検知添削を詳細に再分析 |
 | `/lang-coach:history [N\|all]` | 添削履歴・統計・弱点分析 |
 
 ### 使用例

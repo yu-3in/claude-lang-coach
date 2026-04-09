@@ -1,9 +1,9 @@
 ---
 name: learn
 description: Correct or translate text for language learning. Detailed scoring, error analysis, and alternatives.
-allowed-tools: Read Bash
+allowed-tools: Read Glob Bash
 user-invocable: true
-argument-hint: "<text>"
+argument-hint: "<text> | last"
 ---
 
 # Language Coach — Learn
@@ -13,7 +13,16 @@ argument-hint: "<text>"
 Read `~/.claude-lang-coach/config.json` via Bash.
 If missing, tell the user: `/lang-coach:setup ja en`
 
-## 2. Analyze
+## 2. Check for "last" mode
+
+If the argument is `last`:
+1. Find the most recent correction file: `ls -t ~/.claude-lang-coach/corrections/*.json | head -1`
+2. Read it
+3. Re-analyze the `input` field from that file with full detail (same as step 3 below)
+4. Skip saving (already saved)
+5. Display with full detail (step 4)
+
+## 3. Analyze
 
 Detect whether input is in target or native language.
 

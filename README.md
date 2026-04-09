@@ -63,6 +63,7 @@ Restart Claude Code.
 | `/lang-coach:setup <native> <target>` | Set your language pair and enable auto-detect |
 | `/lang-coach:setup autodetect on\|off` | Toggle auto-detect mode |
 | `/lang-coach:learn <text>` | Detailed correction with scoring (target lang) or translation coaching (native lang) |
+| `/lang-coach:learn last` | Re-analyze the most recent auto-detect correction in full detail |
 | `/lang-coach:history [N\|all]` | View correction history, stats, and weak points |
 
 ### Examples
