@@ -1,6 +1,6 @@
 {
   "name": "lang-coach",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Turn daily work into language practice. Auto-detects target language in your workflow and provides inline corrections.",
   "author": {
     "name": "yu-3in",
