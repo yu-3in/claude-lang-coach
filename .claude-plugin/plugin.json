@@ -1,0 +1,26 @@
+{
+  "name": "lang-coach",
+  "version": "1.0.0",
+  "description": "Turn daily work into language practice. Auto-detects target language in your workflow and provides inline corrections.",
+  "author": {
+    "name": "yu-3in",
+    "url": "https://github.com/yu-3in"
+  },
+  "repository": "https://github.com/yu-3in/claude-lang-coach",
+  "license": "MIT",
+  "keywords": ["language", "learning", "correction", "translation", "education"],
+  "userConfig": {
+    "native_language": {
+      "title": "Native language",
+      "description": "Your native language code (e.g. ja, ko, zh, es)",
+      "type": "string",
+      "sensitive": false
+    },
+    "target_language": {
+      "title": "Target language",
+      "description": "Language you are learning (e.g. en, fr, de, zh)",
+      "type": "string",
+      "sensitive": false
+    }
+  }
+}

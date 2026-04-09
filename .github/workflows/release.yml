@@ -1,0 +1,48 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Extract version from tag
+        id: version
+        run: echo "version=${GITHUB_REF_NAME#v}" >> "$GITHUB_OUTPUT"
+
+      - name: Update version badges in READMEs
+        run: |
+          for file in README.md README.ja.md README.ko.md README.zh.md README.fr.md README.de.md README.es.md; do
+            if [ -f "$file" ]; then
+              sed -i "s|version-[0-9][0-9]*\.[0-9][0-9]*\.[0-9][0-9]*-green|version-${{ steps.version.outputs.version }}-green|g" "$file"
+            fi
+          done
+
+      - name: Commit version badge updates
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git checkout -b temp-release-${{ steps.version.outputs.version }}
+          if git diff --quiet; then
+            echo "No badge changes to commit"
+          else
+            git add README*.md
+            git commit -m "chore: update version badges to ${{ steps.version.outputs.version }}"
+            git push origin temp-release-${{ steps.version.outputs.version }}:main
+          fi
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          generate_release_notes: true
+          tag_name: ${{ github.ref_name }}
+          name: ${{ github.ref_name }}

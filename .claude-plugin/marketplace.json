@@ -1,0 +1,25 @@
+{
+  "name": "claude-lang-coach",
+  "owner": {
+    "name": "yu-3in"
+  },
+  "metadata": {
+    "description": "Language learning plugin for Claude Code",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "lang-coach",
+      "source": "./",
+      "description": "Turn daily work into language practice. Auto-detects and corrects target language in your workflow.",
+      "version": "1.0.0",
+      "license": "MIT",
+      "category": "productivity",
+      "author": {
+        "name": "yu-3in"
+      },
+      "repository": "https://github.com/yu-3in/claude-lang-coach",
+      "keywords": ["language", "learning", "correction", "translation", "education"]
+    }
+  ]
+}

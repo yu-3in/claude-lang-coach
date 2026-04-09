@@ -1,0 +1,60 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Claude Code
+        run: npm install -g @anthropic-ai/claude-code
+
+      - name: Validate plugin manifest
+        run: claude plugin validate .
+
+  shellcheck:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install ShellCheck
+        run: sudo apt-get install -y shellcheck
+
+      - name: Run ShellCheck on all shell scripts
+        run: |
+          shopt -s globstar nullglob
+          scripts=(**/*.sh)
+          if [ ${#scripts[@]} -eq 0 ]; then
+            echo "No .sh files found"
+            exit 0
+          fi
+          shellcheck "${scripts[@]}"
+
+  readme-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Check all READMEs exist
+        run: |
+          missing=0
+          for file in README.md README.ja.md README.ko.md README.zh.md README.fr.md README.de.md README.es.md; do
+            if [ ! -f "$file" ]; then
+              echo "::error::Missing $file"
+              missing=1
+            else
+              echo "Found $file"
+            fi
+          done
+          if [ "$missing" -eq 1 ]; then
+            exit 1
+          fi
