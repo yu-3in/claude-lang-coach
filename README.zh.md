@@ -40,7 +40,7 @@ claude plugin marketplace add yu-3in/claude-lang-coach
 claude plugin install lang-coach@claude-lang-coach
 ```
 
-启用自动检测（仅需一次，需要安装 [jq](https://jqlang.github.io/jq/)）：
+启用自动检测（仅需一次）：
 
 ```bash
 ~/.claude/plugins/cache/claude-lang-coach/lang-coach/*/scripts/install-hook.sh
@@ -48,30 +48,35 @@ claude plugin install lang-coach@claude-lang-coach
 
 重启 Claude Code。
 
+> **Windows**：需要 WSL 或 Git Bash。
+
 ## 配置
 
 ```
 /lang-coach:setup zh en
 ```
 
-## 使用方法
+## 命令
 
-### 手动模式
+| 命令 | 说明 |
+|------|------|
+| `/lang-coach:setup <母语> <目标语言>` | 设置语言对并启用自动检测 |
+| `/lang-coach:setup autodetect on\|off` | 开启或关闭自动检测模式 |
+| `/lang-coach:learn <文本>` | 目标语言输入时给出评分和详细纠正，母语输入时进行翻译辅导 |
+| `/lang-coach:history [N\|all]` | 查看纠正记录、统计数据和薄弱项 |
+
+### 示例
 
 ```
-/lang-coach:learn I goed to the store yesterday
-/lang-coach:learn 昨天我去了商店
+/lang-coach:learn I goed to the store yesterday   # → 带评分的纠正
+/lang-coach:learn 昨天我去了商店                    # → 翻译辅导
+/lang-coach:history                                  # → 最近 10 条纠正记录
+/lang-coach:history all                              # → 全部记录
 ```
 
 ### 自动检测
 
-照常工作即可。每次响应末尾会自动附上纠正内容。
-
-### 复习
-
-```
-/lang-coach:history
-```
+开启自动检测后，每次响应末尾会自动附上纠正内容，无需手动输入命令。
 
 ## 卸载
 

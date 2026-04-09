@@ -40,7 +40,7 @@ claude plugin marketplace add yu-3in/claude-lang-coach
 claude plugin install lang-coach@claude-lang-coach
 ```
 
-Automatische Erkennung aktivieren (einmalig, [jq](https://jqlang.github.io/jq/) erforderlich):
+Automatische Erkennung aktivieren (einmalig):
 
 ```bash
 ~/.claude/plugins/cache/claude-lang-coach/lang-coach/*/scripts/install-hook.sh
@@ -48,30 +48,35 @@ Automatische Erkennung aktivieren (einmalig, [jq](https://jqlang.github.io/jq/) 
 
 Starten Sie Claude Code neu.
 
+> **Windows**: Erfordert WSL oder Git Bash.
+
 ## Einrichtung
 
 ```
 /lang-coach:setup de en
 ```
 
-## Verwendung
+## Befehle
 
-### Manueller Modus
+| Befehl | Beschreibung |
+|--------|--------------|
+| `/lang-coach:setup <Muttersprache> <Zielsprache>` | Sprachpaar festlegen und automatische Erkennung aktivieren |
+| `/lang-coach:setup autodetect on\|off` | Automatische Erkennung ein- oder ausschalten |
+| `/lang-coach:learn <Text>` | Detaillierte Korrektur mit Bewertung (Zielsprache) oder Uebersetzungscoaching (Muttersprache) |
+| `/lang-coach:history [N\|all]` | Korrekturverlauf, Statistiken und Schwachstellen anzeigen |
+
+### Beispiele
 
 ```
-/lang-coach:learn I goed to the store yesterday
-/lang-coach:learn Gestern ging ich zum Geschaeft
+/lang-coach:learn I goed to the store yesterday   # → Korrektur mit Bewertung
+/lang-coach:learn Gestern ging ich zum Geschaeft   # → Uebersetzungscoaching
+/lang-coach:history                                  # → letzte 10 Korrekturen
+/lang-coach:history all                              # → gesamter Verlauf
 ```
 
 ### Automatische Erkennung
 
-Arbeiten Sie einfach wie gewohnt. Korrekturen erscheinen am Ende jeder Antwort.
-
-### Wiederholung
-
-```
-/lang-coach:history
-```
+Bei aktivierter automatischer Erkennung erscheinen Korrekturen am Ende jeder Antwort — ganz ohne Befehle.
 
 ## Deinstallation
 

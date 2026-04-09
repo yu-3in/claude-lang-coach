@@ -40,7 +40,7 @@ claude plugin marketplace add yu-3in/claude-lang-coach
 claude plugin install lang-coach@claude-lang-coach
 ```
 
-자동 감지 활성화 (최초 1회, [jq](https://jqlang.github.io/jq/) 필요):
+자동 감지 활성화 (최초 1회):
 
 ```bash
 ~/.claude/plugins/cache/claude-lang-coach/lang-coach/*/scripts/install-hook.sh
@@ -48,30 +48,35 @@ claude plugin install lang-coach@claude-lang-coach
 
 Claude Code를 재시작하세요.
 
+> **Windows**: WSL 또는 Git Bash가 필요합니다.
+
 ## 설정
 
 ```
 /lang-coach:setup ko en
 ```
 
-## 사용법
+## 명령어
 
-### 수동 모드
+| 명령어 | 설명 |
+|--------|------|
+| `/lang-coach:setup <모국어> <학습 언어>` | 언어 쌍을 설정하고 자동 감지를 활성화합니다 |
+| `/lang-coach:setup autodetect on\|off` | 자동 감지 모드를 켜거나 끕니다 |
+| `/lang-coach:learn <텍스트>` | 학습 언어로 입력하면 점수와 함께 상세 교정, 모국어로 입력하면 번역 코칭 |
+| `/lang-coach:history [N\|all]` | 교정 이력, 통계, 취약 포인트 확인 |
+
+### 사용 예시
 
 ```
-/lang-coach:learn I goed to the store yesterday
-/lang-coach:learn 어제 가계에 갔습니다
+/lang-coach:learn I goed to the store yesterday   # → 점수와 함께 교정
+/lang-coach:learn 어제 가게에 갔습니다              # → 번역 코칭
+/lang-coach:history                                  # → 최근 10건 교정 이력
+/lang-coach:history all                              # → 전체 이력
 ```
 
 ### 자동 감지
 
-평소처럼 작업하기만 하면 됩니다. 매 응답 끝에 교정 내용이 표시됩니다.
-
-### 복습
-
-```
-/lang-coach:history
-```
+자동 감지가 켜져 있으면 별도의 명령어 없이 매 응답 끝에 교정 내용이 자동으로 표시됩니다.
 
 ## 삭제
 

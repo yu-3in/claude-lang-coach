@@ -40,7 +40,7 @@ claude plugin marketplace add yu-3in/claude-lang-coach
 claude plugin install lang-coach@claude-lang-coach
 ```
 
-Activer la detection automatique (une seule fois, necessite [jq](https://jqlang.github.io/jq/)) :
+Activer la detection automatique (une seule fois) :
 
 ```bash
 ~/.claude/plugins/cache/claude-lang-coach/lang-coach/*/scripts/install-hook.sh
@@ -48,30 +48,35 @@ Activer la detection automatique (une seule fois, necessite [jq](https://jqlang.
 
 Redemarrez Claude Code.
 
+> **Windows** : necessite WSL ou Git Bash.
+
 ## Configuration
 
 ```
 /lang-coach:setup fr en
 ```
 
-## Utilisation
+## Commandes
 
-### Mode manuel
+| Commande | Description |
+|----------|-------------|
+| `/lang-coach:setup <maternelle> <cible>` | Definir la paire de langues et activer la detection automatique |
+| `/lang-coach:setup autodetect on\|off` | Activer ou desactiver la detection automatique |
+| `/lang-coach:learn <texte>` | Correction detaillee avec score (langue cible) ou coaching de traduction (langue maternelle) |
+| `/lang-coach:history [N\|all]` | Consulter l'historique des corrections, les statistiques et les points faibles |
+
+### Exemples
 
 ```
-/lang-coach:learn I goed to the store yesterday
-/lang-coach:learn Je suis alle au magasin hier
+/lang-coach:learn I goed to the store yesterday   # → correction avec score
+/lang-coach:learn Je suis alle au magasin hier     # → coaching de traduction
+/lang-coach:history                                  # → 10 dernieres corrections
+/lang-coach:history all                              # → historique complet
 ```
 
 ### Detection automatique
 
-Travaillez normalement. Les corrections apparaissent a la fin de chaque reponse.
-
-### Revision
-
-```
-/lang-coach:history
-```
+Lorsque la detection automatique est activee, les corrections apparaissent automatiquement a la fin de chaque reponse, sans commande necessaire.
 
 ## Desinstallation
 
