@@ -53,26 +53,26 @@ Claude Code를 재시작하세요.
 ## 설정
 
 ```
-/lang-coach:setup ko en
+/lang-setup ko en
 ```
 
 ## 명령어
 
 | 명령어 | 설명 |
 |--------|------|
-| `/lang-coach:setup <모국어> <학습 언어>` | 언어 쌍을 설정하고 자동 감지를 활성화합니다 |
-| `/lang-coach:setup autodetect on\|off` | 자동 감지 모드를 켜거나 끕니다 |
-| `/lang-coach:learn <텍스트>` | 학습 언어로 입력하면 점수와 함께 상세 교정, 모국어로 입력하면 번역 코칭 |
-| `/lang-coach:learn last` | 최근 자동 감지 교정을 상세히 재분석 |
-| `/lang-coach:history [N\|all]` | 교정 이력, 통계, 취약 포인트 확인 |
+| `/lang-setup <모국어> <학습 언어>` | 언어 쌍을 설정하고 자동 감지를 활성화합니다 |
+| `/lang-setup autodetect on\|off` | 자동 감지 모드를 켜거나 끕니다 |
+| `/lang-learn <텍스트>` | 학습 언어로 입력하면 점수와 함께 상세 교정, 모국어로 입력하면 번역 코칭 |
+| `/lang-learn last` | 최근 자동 감지 교정을 상세히 재분석 |
+| `/lang-history [N\|all]` | 교정 이력, 통계, 취약 포인트 확인 |
 
 ### 사용 예시
 
 ```
-/lang-coach:learn I goed to the store yesterday   # → 점수와 함께 교정
-/lang-coach:learn 어제 가게에 갔습니다              # → 번역 코칭
-/lang-coach:history                                  # → 최근 10건 교정 이력
-/lang-coach:history all                              # → 전체 이력
+/lang-learn I goed to the store yesterday   # → 점수와 함께 교정
+/lang-learn 어제 가게에 갔습니다              # → 번역 코칭
+/lang-history                                  # → 최근 10건 교정 이력
+/lang-history all                              # → 전체 이력
 ```
 
 ### 자동 감지

@@ -53,26 +53,26 @@ claude plugin install lang-coach@claude-lang-coach
 ## 配置
 
 ```
-/lang-coach:setup zh en
+/lang-setup zh en
 ```
 
 ## 命令
 
 | 命令 | 说明 |
 |------|------|
-| `/lang-coach:setup <母语> <目标语言>` | 设置语言对并启用自动检测 |
-| `/lang-coach:setup autodetect on\|off` | 开启或关闭自动检测模式 |
-| `/lang-coach:learn <文本>` | 目标语言输入时给出评分和详细纠正，母语输入时进行翻译辅导 |
-| `/lang-coach:learn last` | 详细重新分析最近的自动检测修正 |
-| `/lang-coach:history [N\|all]` | 查看纠正记录、统计数据和薄弱项 |
+| `/lang-setup <母语> <目标语言>` | 设置语言对并启用自动检测 |
+| `/lang-setup autodetect on\|off` | 开启或关闭自动检测模式 |
+| `/lang-learn <文本>` | 目标语言输入时给出评分和详细纠正，母语输入时进行翻译辅导 |
+| `/lang-learn last` | 详细重新分析最近的自动检测修正 |
+| `/lang-history [N\|all]` | 查看纠正记录、统计数据和薄弱项 |
 
 ### 示例
 
 ```
-/lang-coach:learn I goed to the store yesterday   # → 带评分的纠正
-/lang-coach:learn 昨天我去了商店                    # → 翻译辅导
-/lang-coach:history                                  # → 最近 10 条纠正记录
-/lang-coach:history all                              # → 全部记录
+/lang-learn I goed to the store yesterday   # → 带评分的纠正
+/lang-learn 昨天我去了商店                    # → 翻译辅导
+/lang-history                                  # → 最近 10 条纠正记录
+/lang-history all                              # → 全部记录
 ```
 
 ### 自动检测

@@ -47,19 +47,19 @@ Claude Code を再起動。
 
 | コマンド | 説明 |
 |---------|------|
-| `/lang-coach:setup <native> <target>` | 言語ペアを設定し自動検知を有効化 |
-| `/lang-coach:setup autodetect on\|off` | 自動検知の切替 |
-| `/lang-coach:learn <text>` | 詳細な添削 (学習言語) または翻訳指導 (母国語) |
-| `/lang-coach:learn last` | 直近の自動検知添削を詳細に再分析 |
-| `/lang-coach:history [N\|all]` | 添削履歴・統計・弱点分析 |
+| `/lang-setup <native> <target>` | 言語ペアを設定し自動検知を有効化 |
+| `/lang-setup autodetect on\|off` | 自動検知の切替 |
+| `/lang-learn <text>` | 詳細な添削 (学習言語) または翻訳指導 (母国語) |
+| `/lang-learn last` | 直近の自動検知添削を詳細に再分析 |
+| `/lang-history [N\|all]` | 添削履歴・統計・弱点分析 |
 
 ### 使用例
 
 ```
-/lang-coach:setup ja en                             # 日本語 → 英語
-/lang-coach:learn I goed to the store yesterday     # → スコア付き添削
-/lang-coach:learn 昨日お店に行きました                # → 翻訳指導
-/lang-coach:history                                   # → 直近 10 件
+/lang-setup ja en                             # 日本語 → 英語
+/lang-learn I goed to the store yesterday     # → スコア付き添削
+/lang-learn 昨日お店に行きました                # → 翻訳指導
+/lang-history                                   # → 直近 10 件
 ```
 
 ### 自動検知
