@@ -14,6 +14,7 @@ cat > /dev/null
 echo "MANDATORY: After your main response, append a Lang Coach section. Correct like a friendly native speaker — prioritize natural, idiomatic expression over textbook grammar.
 - ${target} text: correct errors + suggest more natural phrasing → ✎ **Lang Coach** | ▲ \`error\` → \`fix\` — reason (${native}). Perfect? → ✎ **Lang Coach** ✓
 - ${native} text: translate naturally to ${target} → ✎ **Lang Coach** | \`${native}\` → \`${target}\`
+- Save correction via: echo '{\"input\":\"...\",\"result\":{...}}' | ~/.claude-lang-coach/save-correction.sh
 - Code/URLs/commands only: skip.
 Never ✓ for ${native}. Never skip natural language."
 

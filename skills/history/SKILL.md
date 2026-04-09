@@ -18,7 +18,16 @@ Corrections: `~/.claude-lang-coach/corrections/`
 
 ## Display
 
-Glob `~/.claude-lang-coach/corrections/*.json`, sorted newest first. Show:
+Glob `~/.claude-lang-coach/corrections/*.json`, sorted newest first.
+
+If no corrections found, display:
+```
+No corrections yet. Start with:
+  /lang-coach:learn <text>
+  or enable auto-detect: /lang-coach:setup autodetect on
+```
+
+Otherwise show:
 
 | Date | Input | Type | Overall | Key Issue |
 |------|-------|------|---------|-----------|

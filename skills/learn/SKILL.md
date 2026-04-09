@@ -16,15 +16,15 @@ If missing, tell the user: `/lang-coach:setup ja en`
 ## 2. Check for "last" mode
 
 If the argument is `last`:
-1. Find the most recent correction file: `ls -t ~/.claude-lang-coach/corrections/*.json | head -1`
+1. Find the most recent correction: `ls -t ~/.claude-lang-coach/corrections/*.json | head -1`
 2. Read it
-3. Re-analyze the `input` field from that file with full detail (same as step 3 below)
+3. Re-analyze the `input` field with full detail (step 3)
 4. Skip saving (already saved)
-5. Display with full detail (step 4)
 
 ## 3. Analyze
 
 Detect whether input is in target or native language.
+Correct like a friendly native speaker — prioritize natural, idiomatic expression.
 
 **Target language → Correction:**
 1. Detect errors (grammar, vocabulary, tense, spelling, collocation)
@@ -40,7 +40,7 @@ Detect whether input is in target or native language.
 3. Grammar points
 4. Key vocabulary
 
-## 3. Save
+## 4. Save
 
 ```bash
 cat << 'JSONEOF' | ~/.claude-lang-coach/save-correction.sh
@@ -61,7 +61,7 @@ cat << 'JSONEOF' | ~/.claude-lang-coach/save-correction.sh
 JSONEOF
 ```
 
-## 4. Display
+## 5. Display
 
 Localize labels to native language:
 

@@ -1,5 +1,5 @@
 {
-  "description": "Language Coach hooks",
+  "description": "Language Coach hooks. UserPromptSubmit is registered globally via install-hook.sh due to https://github.com/anthropics/claude-code/issues/20659",
   "hooks": {
     "SessionStart": [
       {
@@ -8,18 +8,6 @@
           {
             "type": "command",
             "command": "${CLAUDE_PLUGIN_ROOT}/scripts/setup.sh",
-            "timeout": 5
-          }
-        ]
-      }
-    ],
-    "UserPromptSubmit": [
-      {
-        "matcher": "*",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "${CLAUDE_PLUGIN_ROOT}/scripts/autodetect.sh",
             "timeout": 5
           }
         ]
