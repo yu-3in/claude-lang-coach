@@ -1,6 +1,5 @@
 #!/bin/bash
 # Language Coach — Auto-detect Hook (UserPromptSubmit)
-# Injects a brief correction instruction into Claude's context.
 
 CONFIG="$HOME/.claude-lang-coach/config.json"
 
@@ -12,10 +11,12 @@ native=$(grep -o '"native_language" *: *"[^"]*"' "$CONFIG" | grep -o '"[^"]*"$' 
 
 cat > /dev/null
 
-echo "MANDATORY: After your main response, append a Lang Coach section.
-- ${target} text → correct errors, explain in ${native}
-- ${native} text → show how to express in ${target}
-Format: ✎ **Lang Coach** | ▲ \`original\` → \`corrected\` — explanation
-No issues? ✎ **Lang Coach** ✓ | Never skip."
+echo "MANDATORY: After your main response, you MUST append a Lang Coach section.
+Rules:
+- If user wrote ${target}: correct errors → ✎ **Lang Coach** | ▲ \`error\` → \`fix\` — reason (${native}). No errors? → ✎ **Lang Coach** ✓
+- If user wrote ${native}: translate to ${target} → ✎ **Lang Coach** | \`${native} phrase\` → \`${target} translation\`
+- Mixed: do both.
+- Only code/URLs/slash commands: skip entirely (no output).
+Never skip for natural language input. Never output just ✓ for ${native} text."
 
 exit 0
