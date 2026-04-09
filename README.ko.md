@@ -63,6 +63,7 @@ Claude Code를 재시작하세요.
 | `/lang-coach:setup <모국어> <학습 언어>` | 언어 쌍을 설정하고 자동 감지를 활성화합니다 |
 | `/lang-coach:setup autodetect on\|off` | 자동 감지 모드를 켜거나 끕니다 |
 | `/lang-coach:learn <텍스트>` | 학습 언어로 입력하면 점수와 함께 상세 교정, 모국어로 입력하면 번역 코칭 |
+| `/lang-coach:learn last` | 최근 자동 감지 교정을 상세히 재분석 |
 | `/lang-coach:history [N\|all]` | 교정 이력, 통계, 취약 포인트 확인 |
 
 ### 사용 예시

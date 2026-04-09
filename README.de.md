@@ -63,6 +63,7 @@ Starten Sie Claude Code neu.
 | `/lang-coach:setup <Muttersprache> <Zielsprache>` | Sprachpaar festlegen und automatische Erkennung aktivieren |
 | `/lang-coach:setup autodetect on\|off` | Automatische Erkennung ein- oder ausschalten |
 | `/lang-coach:learn <Text>` | Detaillierte Korrektur mit Bewertung (Zielsprache) oder Uebersetzungscoaching (Muttersprache) |
+| `/lang-coach:learn last` | Letzte automatische Korrektur detailliert erneut analysieren |
 | `/lang-coach:history [N\|all]` | Korrekturverlauf, Statistiken und Schwachstellen anzeigen |
 
 ### Beispiele

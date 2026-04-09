@@ -63,6 +63,7 @@ Redemarrez Claude Code.
 | `/lang-coach:setup <maternelle> <cible>` | Definir la paire de langues et activer la detection automatique |
 | `/lang-coach:setup autodetect on\|off` | Activer ou desactiver la detection automatique |
 | `/lang-coach:learn <texte>` | Correction detaillee avec score (langue cible) ou coaching de traduction (langue maternelle) |
+| `/lang-coach:learn last` | Réanalyser en détail la dernière correction automatique |
 | `/lang-coach:history [N\|all]` | Consulter l'historique des corrections, les statistiques et les points faibles |
 
 ### Exemples

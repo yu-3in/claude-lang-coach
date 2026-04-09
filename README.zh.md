@@ -63,6 +63,7 @@ claude plugin install lang-coach@claude-lang-coach
 | `/lang-coach:setup <母语> <目标语言>` | 设置语言对并启用自动检测 |
 | `/lang-coach:setup autodetect on\|off` | 开启或关闭自动检测模式 |
 | `/lang-coach:learn <文本>` | 目标语言输入时给出评分和详细纠正，母语输入时进行翻译辅导 |
+| `/lang-coach:learn last` | 详细重新分析最近的自动检测修正 |
 | `/lang-coach:history [N\|all]` | 查看纠正记录、统计数据和薄弱项 |
 
 ### 示例

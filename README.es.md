@@ -63,6 +63,7 @@ Reinicia Claude Code.
 | `/lang-coach:setup <nativo> <objetivo>` | Configurar el par de idiomas y activar la deteccion automatica |
 | `/lang-coach:setup autodetect on\|off` | Activar o desactivar la deteccion automatica |
 | `/lang-coach:learn <texto>` | Correccion detallada con puntuacion (idioma objetivo) o coaching de traduccion (idioma nativo) |
+| `/lang-coach:learn last` | Reanalizar en detalle la última corrección automática |
 | `/lang-coach:history [N\|all]` | Ver historial de correcciones, estadisticas y puntos debiles |
 
 ### Ejemplos
