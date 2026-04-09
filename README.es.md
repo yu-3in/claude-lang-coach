@@ -53,26 +53,26 @@ Reinicia Claude Code.
 ## Configuracion
 
 ```
-/lang-setup es en
+/lang-coach:setup es en
 ```
 
 ## Comandos
 
 | Comando | Descripcion |
 |---------|-------------|
-| `/lang-setup <nativo> <objetivo>` | Configurar el par de idiomas y activar la deteccion automatica |
-| `/lang-setup autodetect on\|off` | Activar o desactivar la deteccion automatica |
-| `/lang-learn <texto>` | Correccion detallada con puntuacion (idioma objetivo) o coaching de traduccion (idioma nativo) |
-| `/lang-learn last` | Reanalizar en detalle la última corrección automática |
-| `/lang-history [N\|all]` | Ver historial de correcciones, estadisticas y puntos debiles |
+| `/lang-coach:setup <nativo> <objetivo>` | Configurar el par de idiomas y activar la deteccion automatica |
+| `/lang-coach:setup autodetect on\|off` | Activar o desactivar la deteccion automatica |
+| `/lang-coach:learn <texto>` | Correccion detallada con puntuacion (idioma objetivo) o coaching de traduccion (idioma nativo) |
+| `/lang-coach:learn last` | Reanalizar en detalle la última corrección automática |
+| `/lang-coach:history [N\|all]` | Ver historial de correcciones, estadisticas y puntos debiles |
 
 ### Ejemplos
 
 ```
-/lang-learn I goed to the store yesterday   # → correccion con puntuacion
-/lang-learn Ayer fui a la tienda             # → coaching de traduccion
-/lang-history                                  # → ultimas 10 correcciones
-/lang-history all                              # → historial completo
+/lang-coach:learn I goed to the store yesterday   # → correccion con puntuacion
+/lang-coach:learn Ayer fui a la tienda             # → coaching de traduccion
+/lang-coach:history                                  # → ultimas 10 correcciones
+/lang-coach:history all                              # → historial completo
 ```
 
 ### Deteccion automatica

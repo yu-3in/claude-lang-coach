@@ -1,5 +1,5 @@
 ---
-name: lang-setup
+name: setup
 description: Configure language pair and auto-detect for Language Coach.
 allowed-tools: Read Write Bash
 user-invocable: true

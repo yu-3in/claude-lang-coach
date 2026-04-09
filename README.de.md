@@ -53,26 +53,26 @@ Starten Sie Claude Code neu.
 ## Einrichtung
 
 ```
-/lang-setup de en
+/lang-coach:setup de en
 ```
 
 ## Befehle
 
 | Befehl | Beschreibung |
 |--------|--------------|
-| `/lang-setup <Muttersprache> <Zielsprache>` | Sprachpaar festlegen und automatische Erkennung aktivieren |
-| `/lang-setup autodetect on\|off` | Automatische Erkennung ein- oder ausschalten |
-| `/lang-learn <Text>` | Detaillierte Korrektur mit Bewertung (Zielsprache) oder Uebersetzungscoaching (Muttersprache) |
-| `/lang-learn last` | Letzte automatische Korrektur detailliert erneut analysieren |
-| `/lang-history [N\|all]` | Korrekturverlauf, Statistiken und Schwachstellen anzeigen |
+| `/lang-coach:setup <Muttersprache> <Zielsprache>` | Sprachpaar festlegen und automatische Erkennung aktivieren |
+| `/lang-coach:setup autodetect on\|off` | Automatische Erkennung ein- oder ausschalten |
+| `/lang-coach:learn <Text>` | Detaillierte Korrektur mit Bewertung (Zielsprache) oder Uebersetzungscoaching (Muttersprache) |
+| `/lang-coach:learn last` | Letzte automatische Korrektur detailliert erneut analysieren |
+| `/lang-coach:history [N\|all]` | Korrekturverlauf, Statistiken und Schwachstellen anzeigen |
 
 ### Beispiele
 
 ```
-/lang-learn I goed to the store yesterday   # → Korrektur mit Bewertung
-/lang-learn Gestern ging ich zum Geschaeft   # → Uebersetzungscoaching
-/lang-history                                  # → letzte 10 Korrekturen
-/lang-history all                              # → gesamter Verlauf
+/lang-coach:learn I goed to the store yesterday   # → Korrektur mit Bewertung
+/lang-coach:learn Gestern ging ich zum Geschaeft   # → Uebersetzungscoaching
+/lang-coach:history                                  # → letzte 10 Korrekturen
+/lang-coach:history all                              # → gesamter Verlauf
 ```
 
 ### Automatische Erkennung

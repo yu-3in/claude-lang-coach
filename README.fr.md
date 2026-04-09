@@ -53,26 +53,26 @@ Redemarrez Claude Code.
 ## Configuration
 
 ```
-/lang-setup fr en
+/lang-coach:setup fr en
 ```
 
 ## Commandes
 
 | Commande | Description |
 |----------|-------------|
-| `/lang-setup <maternelle> <cible>` | Definir la paire de langues et activer la detection automatique |
-| `/lang-setup autodetect on\|off` | Activer ou desactiver la detection automatique |
-| `/lang-learn <texte>` | Correction detaillee avec score (langue cible) ou coaching de traduction (langue maternelle) |
-| `/lang-learn last` | Réanalyser en détail la dernière correction automatique |
-| `/lang-history [N\|all]` | Consulter l'historique des corrections, les statistiques et les points faibles |
+| `/lang-coach:setup <maternelle> <cible>` | Definir la paire de langues et activer la detection automatique |
+| `/lang-coach:setup autodetect on\|off` | Activer ou desactiver la detection automatique |
+| `/lang-coach:learn <texte>` | Correction detaillee avec score (langue cible) ou coaching de traduction (langue maternelle) |
+| `/lang-coach:learn last` | Réanalyser en détail la dernière correction automatique |
+| `/lang-coach:history [N\|all]` | Consulter l'historique des corrections, les statistiques et les points faibles |
 
 ### Exemples
 
 ```
-/lang-learn I goed to the store yesterday   # → correction avec score
-/lang-learn Je suis alle au magasin hier     # → coaching de traduction
-/lang-history                                  # → 10 dernieres corrections
-/lang-history all                              # → historique complet
+/lang-coach:learn I goed to the store yesterday   # → correction avec score
+/lang-coach:learn Je suis alle au magasin hier     # → coaching de traduction
+/lang-coach:history                                  # → 10 dernieres corrections
+/lang-coach:history all                              # → historique complet
 ```
 
 ### Detection automatique

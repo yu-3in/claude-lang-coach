@@ -53,26 +53,26 @@ Restart Claude Code.
 ## Setup
 
 ```
-/lang-setup ja en
+/lang-coach:setup ja en
 ```
 
 ## Commands
 
 | Command | Description |
 |---------|-------------|
-| `/lang-setup <native> <target>` | Set your language pair and enable auto-detect |
-| `/lang-setup autodetect on\|off` | Toggle auto-detect mode |
-| `/lang-learn <text>` | Detailed correction with scoring (target lang) or translation coaching (native lang) |
-| `/lang-learn last` | Re-analyze the most recent auto-detect correction in full detail |
-| `/lang-history [N\|all]` | View correction history, stats, and weak points |
+| `/lang-coach:setup <native> <target>` | Set your language pair and enable auto-detect |
+| `/lang-coach:setup autodetect on\|off` | Toggle auto-detect mode |
+| `/lang-coach:learn <text>` | Detailed correction with scoring (target lang) or translation coaching (native lang) |
+| `/lang-coach:learn last` | Re-analyze the most recent auto-detect correction in full detail |
+| `/lang-coach:history [N\|all]` | View correction history, stats, and weak points |
 
 ### Examples
 
 ```
-/lang-learn I goed to the store yesterday   # → correction with score
-/lang-learn 昨日お店に行きました              # → translation coaching
-/lang-history                                  # → last 10 corrections
-/lang-history all                              # → full history
+/lang-coach:learn I goed to the store yesterday   # → correction with score
+/lang-coach:learn 昨日お店に行きました              # → translation coaching
+/lang-coach:history                                  # → last 10 corrections
+/lang-coach:history all                              # → full history
 ```
 
 ### Auto-detect

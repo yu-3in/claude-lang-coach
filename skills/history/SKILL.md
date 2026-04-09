@@ -1,5 +1,5 @@
 ---
-name: lang-history
+name: history
 description: Review language learning history — scores, error patterns, and progress.
 allowed-tools: Read Glob Grep Bash
 user-invocable: true

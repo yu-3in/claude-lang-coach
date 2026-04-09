@@ -1,5 +1,5 @@
 ---
-name: lang-learn
+name: learn
 description: Correct or translate text for language learning. Detailed scoring, error analysis, and alternatives.
 allowed-tools: Read Glob Bash
 user-invocable: true
@@ -11,7 +11,7 @@ argument-hint: "<text> | last"
 ## 1. Load config
 
 Read `~/.claude-lang-coach/config.json` via Bash.
-If missing, tell the user: `/lang-setup ja en`
+If missing, tell the user: `/lang-coach:setup ja en`
 
 ## 2. Check for "last" mode
 
