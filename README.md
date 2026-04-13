@@ -40,13 +40,7 @@ claude plugin marketplace add yu-3in/claude-lang-coach
 claude plugin install lang-coach@claude-lang-coach
 ```
 
-Enable auto-detect (one-time):
-
-```bash
-~/.claude/plugins/cache/claude-lang-coach/lang-coach/*/scripts/install-hook.sh
-```
-
-Restart Claude Code.
+Restart Claude Code. The auto-detect hook is registered automatically on first session start.
 
 > **Windows**: Requires WSL or Git Bash.
 
