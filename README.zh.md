@@ -79,6 +79,15 @@ claude plugin install lang-coach@claude-lang-coach
 
 开启自动检测后，每次响应末尾会自动附上纠正内容，无需手动输入命令。
 
+## 更新
+
+```bash
+claude plugin marketplace update claude-lang-coach
+claude plugin update lang-coach@claude-lang-coach
+```
+
+更新后重启 Claude Code。
+
 ## 卸载
 
 ```bash

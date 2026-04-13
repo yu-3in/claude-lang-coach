@@ -79,6 +79,15 @@ Reinicia Claude Code.
 
 Con la deteccion automatica activada, las correcciones aparecen al final de cada respuesta de forma automatica, sin necesidad de comandos.
 
+## Actualización
+
+```bash
+claude plugin marketplace update claude-lang-coach
+claude plugin update lang-coach@claude-lang-coach
+```
+
+Reinicie Claude Code después de actualizar.
+
 ## Desinstalacion
 
 ```bash

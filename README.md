@@ -73,6 +73,15 @@ Restart Claude Code. The auto-detect hook is registered automatically on first s
 
 With auto-detect ON, corrections appear at the end of every response automatically — no commands needed.
 
+## Update
+
+```bash
+claude plugin marketplace update claude-lang-coach
+claude plugin update lang-coach@claude-lang-coach
+```
+
+Restart Claude Code after updating.
+
 ## Uninstall
 
 ```bash

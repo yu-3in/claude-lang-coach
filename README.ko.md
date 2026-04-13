@@ -79,6 +79,15 @@ Claude Code를 재시작하세요.
 
 자동 감지가 켜져 있으면 별도의 명령어 없이 매 응답 끝에 교정 내용이 자동으로 표시됩니다.
 
+## 업데이트
+
+```bash
+claude plugin marketplace update claude-lang-coach
+claude plugin update lang-coach@claude-lang-coach
+```
+
+업데이트 후 Claude Code를 재시작하세요.
+
 ## 삭제
 
 ```bash

@@ -79,6 +79,15 @@ Starten Sie Claude Code neu.
 
 Bei aktivierter automatischer Erkennung erscheinen Korrekturen am Ende jeder Antwort — ganz ohne Befehle.
 
+## Aktualisierung
+
+```bash
+claude plugin marketplace update claude-lang-coach
+claude plugin update lang-coach@claude-lang-coach
+```
+
+Starten Sie Claude Code nach dem Update neu.
+
 ## Deinstallation
 
 ```bash

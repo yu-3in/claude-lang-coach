@@ -79,6 +79,15 @@ Claude Code を再起動。
 
 ON にすると、普段通り作業するだけで応答末尾に添削が追加されます。
 
+## アップデート
+
+```bash
+claude plugin marketplace update claude-lang-coach
+claude plugin update lang-coach@claude-lang-coach
+```
+
+更新後、Claude Code を再起動してください。
+
 ## アンインストール
 
 ```bash
