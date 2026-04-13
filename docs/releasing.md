@@ -8,29 +8,46 @@
 - **MINOR**: New features (new skill, new hook behavior)
 - **PATCH**: Bug fixes, documentation
 
-## Release Process
+## Release Steps
 
-1. **Update version** in both manifests:
+### 1. Update manifests
 
 ```bash
-# Example: bumping to 1.2.0
-sed -i '' 's/"version": "[^"]*"/"version": "1.2.0"/g' \
+VERSION=1.4.0
+sed -i '' "s/\"version\": \"[^\"]*\"/\"version\": \"${VERSION}\"/g" \
   .claude-plugin/plugin.json \
   .claude-plugin/marketplace.json
 ```
 
-2. **Commit and tag**:
+### 2. Commit
 
 ```bash
 git add -A
-git commit -m "chore: bump version to 1.2.0"
-git tag v1.2.0
-git push origin main --tags
+git commit -m "chore: bump version to ${VERSION}"
+git push origin main
 ```
 
-3. **GitHub Release** is created automatically by the `release.yml` workflow when a `v*` tag is pushed. It auto-generates the changelog from commit messages.
+### 3. Tag and push
 
-4. **Users update** via:
+```bash
+git tag v${VERSION}
+git push origin v${VERSION}
+```
+
+This triggers the release workflow which:
+- Updates version badges in all 7 README files
+- Creates a GitHub Release with auto-generated changelog
+
+**Do NOT manually update README badges.** The workflow handles this.
+
+### 4. Verify
+
+```bash
+gh run list --repo yu-3in/claude-lang-coach --limit 1
+gh release view v${VERSION} --repo yu-3in/claude-lang-coach
+```
+
+## User Update Command
 
 ```bash
 claude plugin marketplace update claude-lang-coach
@@ -41,14 +58,9 @@ claude plugin update lang-coach@claude-lang-coach
 
 - [ ] Version updated in `.claude-plugin/plugin.json`
 - [ ] Version updated in `.claude-plugin/marketplace.json`
-- [ ] All README badge versions updated (release workflow does this automatically)
-- [ ] Changes tested with `claude --plugin-dir .`
+- [ ] **NOT** updated: README badges (workflow does this)
+- [ ] Tested with `claude --plugin-dir .`
 - [ ] Conventional commit messages used
-- [ ] Tag matches version (`v1.2.0`)
-
-## Post-Release
-
-After pushing a tag:
-1. The release workflow updates version badges in all READMEs
-2. A GitHub Release is created with auto-generated notes
-3. Users receive the update on next `claude plugin update`
+- [ ] Tag pushed: `git tag v${VERSION} && git push origin v${VERSION}`
+- [ ] Release workflow succeeded
+- [ ] `git pull` to sync workflow's badge commit
